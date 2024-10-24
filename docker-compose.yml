@@ -1,0 +1,39 @@
+version: "3.7"
+services: 
+
+  db:
+    image: mysql:5.7
+    container_name: apps.cambodiahub.com-db
+    environment:
+      MYSQL_DATABASE: "${MYSQL_DATABASE}"
+      MYSQL_USER: "${MYSQL_USER}"
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+  
+  laylong69.com-fpm:
+    image: wordpress:php7.4-fpm-alpine
+    container_name: apps.cambodiahub.com-fpm
+    links:
+      - db
+    volumes:
+      - wp_files:/var/www/html
+      - ./php.ini:/usr/local/etc/php/conf.d/php.ini
+    environment:
+      WORDPRESS_DB_HOST: "${WORDPRESS_DB_HOST}"
+      WORDPRESS_DB_NAME: "${WORDPRESS_DB_NAME}"
+      WORDPRESS_DB_USER: "${WORDPRESS_DB_USER}"
+      WORDPRESS_DB_PASSWORD: "${WORDPRESS_DB_PASSWORD}"
+  
+  nginx:
+    image: nginx:alpine
+    container_name: apps.cambodiahub.com-nginx
+    depends_on: 
+      - apps.cambodiahub.com-fpm
+    ports:
+      - 8168:80
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+      - wp_files:/var/www/html
+
+volumes: 
+  wp_files: 
