@@ -30,7 +30,7 @@ services:
     depends_on: 
       - apps.cambodiahub.com-fpm
     ports:
-      - 8168:80
+      - 8083:80
     volumes:
       - ./conf.d:/etc/nginx/conf.d
       - wp_files:/var/www/html
