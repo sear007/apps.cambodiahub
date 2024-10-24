@@ -10,7 +10,7 @@ services:
       MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
   
-  laylong69.com-fpm:
+  apps.cambodiahub.com-fpm:
     image: wordpress:php7.4-fpm-alpine
     container_name: apps.cambodiahub.com-fpm
     links:
