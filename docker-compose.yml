@@ -18,12 +18,12 @@ services:
     volumes:
       - wp_files:/var/www/html
       - ./php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./this_theme:/var/www/html/wp-content/themes/this_theme
     environment:
       WORDPRESS_DB_HOST: "${WORDPRESS_DB_HOST}"
       WORDPRESS_DB_NAME: "${WORDPRESS_DB_NAME}"
       WORDPRESS_DB_USER: "${WORDPRESS_DB_USER}"
       WORDPRESS_DB_PASSWORD: "${WORDPRESS_DB_PASSWORD}"
-  
   nginx:
     image: nginx:alpine
     container_name: apps.cambodiahub.com-nginx
