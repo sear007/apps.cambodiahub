@@ -1,0 +1,16 @@
+{
+  "name": "my_theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass assets/admin/css/:assets/admin/css/ --source-map",
+    "watch-style": "sass assets/admin/css/:assets/admin/css/ --source-map --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.0",
+    "sass": "^1.80.4"
+  }
+}
