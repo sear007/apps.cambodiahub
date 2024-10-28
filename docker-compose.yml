@@ -34,6 +34,7 @@ services:
     volumes:
       - ./conf.d:/etc/nginx/conf.d
       - wp_files:/var/www/html
+      - ./this_theme:/var/www/html/wp-content/themes/this_theme
 
 volumes: 
   wp_files: 
