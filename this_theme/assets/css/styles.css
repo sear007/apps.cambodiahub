@@ -3035,7 +3035,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 .s-header {
     --header-height : 72px;
-    --logo-width    : 10.2rem;
+    --logo-width    : 70px;
     --width-grid-max: calc(var(--width-sixteen-cols) - calc(var(--gutter) * 2));
     --box-shadow    : 0 1px 1px rgba(0, 0, 0, 0.02),
                       0 2px 2px rgba(0, 0, 0, 0.02),

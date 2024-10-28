@@ -1,0 +1,71 @@
+.intro-form-socials {
+  position: relative;
+  background-color: #f8f8f8;
+  padding: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.intro-form-socials .intro-form-socials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.intro-form-socials .intro-form-socials-container {
+  display: none;
+}
+.intro-form-socials button.add-social {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.intro-form-socials .social-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.intro-form-socials .social-fields .social-item {
+  display: flex;
+  gap: 10px;
+}
+
+.intro-form-image .form-group {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.intro-form-buttons {
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.intro-form-buttons p {
+  margin: 0;
+}
+.intro-form-buttons .button-group {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+.intro-form-buttons .intro-form-buttons-collapse-content {
+  display: none;
+}
+.intro-form-buttons .intro-form-buttons-collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.intro-form-buttons .intro-form-buttons-collapse-header span {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=intro_style.css.map */
