@@ -1,0 +1,5 @@
+# Ignore all .scss files
+*.scss
+
+# Ignore the node_modules directory
+node_modules/
